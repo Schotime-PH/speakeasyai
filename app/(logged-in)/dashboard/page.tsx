@@ -2,13 +2,13 @@ import BgGradient from "@/components/common/bg-gradient";
 import { Badge } from "@/components/ui/badge";
 import UpgradeYourPlan from "@/components/upload/upgrade-your-plan";
 import UploadForm from "@/components/upload/upload-form";
-import getDbConnection from "@/lib/db";
+{/*import getDbConnection from "@/lib/db";
 import {
   doesUserExist,
   getPlanType,
   hasCancelledSubscription,
   updateUser,
-} from "@/lib/user-helpers";
+} from "@/lib/user-helpers";*/}
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
@@ -21,13 +21,13 @@ export default async function Dashboard() {
 
   const email = clerkUser?.emailAddresses?.[0].emailAddress ?? "";
 
-  const sql = await getDbConnection();
+  {/*const sql = await getDbConnection();*/}
 
   //updatethe user id
   let userId = null;
   let priceId = null;
 
-  const hasUserCancelled = await hasCancelledSubscription(sql, email);
+  {/*const hasUserCancelled = await hasCancelledSubscription(sql, email);
   const user = await doesUserExist(sql, email);
 
   if (user) {
@@ -50,7 +50,7 @@ export default async function Dashboard() {
   const posts = await sql`SELECT * FROM posts WHERE user_id = ${userId}`;
 
   const isValidBasicPlan = isBasicPlan && posts.length < 3;
-
+*/}
   return (
     <BgGradient>
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">

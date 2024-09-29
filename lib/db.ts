@@ -1,4 +1,4 @@
-import { neon } from "@neondatabase/serverless";
+{/*import { neon } from "@neondatabase/serverless";
 
 export default async function getDbConnection() {
   if (!process.env.DATABASE_URL) {
@@ -7,3 +7,4 @@ export default async function getDbConnection() {
   const sql = neon(process.env.DATABASE_URL);
   return sql;
 }
+*/}

@@ -1,5 +1,5 @@
 "use server";
-import getDbConnection from "@/lib/db";
+{/*import getDbConnection from "@/lib/db";*/}
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import OpenAI from "openai";
@@ -69,7 +69,7 @@ export async function transcribeUploadedFile(
   }
 }
 
-async function saveBlogPost(userId: string, title: string, content: string) {
+{/*async function saveBlogPost(userId: string, title: string, content: string) {
   try {
     const sql = await getDbConnection();
     const [insertedPost] = await sql`
@@ -99,7 +99,7 @@ async function getUserBlogPosts(userId: string) {
     throw error;
   }
 }
-
+*/}
 async function generateBlogPost({
   transcriptions,
   userPosts,
@@ -142,7 +142,7 @@ Here's the transcription to convert: ${transcriptions}`,
 
   return completion.choices[0].message.content;
 }
-export async function generateBlogPostAction({
+{/*export async function generateBlogPostAction({
   transcriptions,
   userId,
 }: {
@@ -173,9 +173,11 @@ export async function generateBlogPostAction({
     if (blogPost) {
       postId = await saveBlogPost(userId, title, blogPost);
     }
-  }
+    
+ */}
+
 
   //navigate
   revalidatePath(`/posts/${postId}`);
   redirect(`/posts/${postId}`);
-}
+

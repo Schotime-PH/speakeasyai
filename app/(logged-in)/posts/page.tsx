@@ -1,5 +1,5 @@
 import BgGradient from "@/components/common/bg-gradient";
-import getDbConnection from "@/lib/db";
+{/*import getDbConnection from "@/lib/db";*/}
 import { currentUser } from "@clerk/nextjs/server";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
@@ -12,9 +12,9 @@ export default async function Page() {
     return redirect("/sign-in");
   }
 
-  const sql = await getDbConnection();
+  {/*const sql = await getDbConnection();
   const posts = await sql`SELECT * from posts where user_id = ${user.id}`;
-
+  */}
   return (
     <main className="mx-auto w-full max-w-screen-xl px-2.5 lg:px-0 mb-12 mt-28">
       <h2 className="text-2xl font-semibold text-gray-800 mb-2">

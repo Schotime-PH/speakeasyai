@@ -1,5 +1,5 @@
 import Stripe from "stripe";
-import getDbConnection from "./db";
+{/*import getDbConnection from "./db";*
 
 export async function handleSubscriptionDeleted({
   subscriptionId,
@@ -79,3 +79,4 @@ async function updateUserSubscription(
     console.error("Error in updating user", err);
   }
 }
+*/}

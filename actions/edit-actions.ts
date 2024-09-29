@@ -1,6 +1,6 @@
 "use server";
 
-import getDbConnection from "@/lib/db";
+{/*import getDbConnection from "@/lib/db";*/}
 import { currentUser } from "@clerk/nextjs/server";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
@@ -16,7 +16,7 @@ export async function updatePostAction(data: {
     redirect("/sign-in");
   }
 
-  try {
+  {/*try {
     const sql = await getDbConnection();
 
     const [title, ...contentParts] = content?.split("\n\n") || [];
@@ -30,6 +30,7 @@ export async function updatePostAction(data: {
     };
   }
 
+  */}
   revalidatePath(`/posts/${postId}`);
   return {
     success: true,
